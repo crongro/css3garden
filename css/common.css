@@ -5,3 +5,17 @@ body,input,textarea,select,button,table{font-family:'나눔고딕',NanumGothic,'
 img,fieldset{border:0}
 ul,ol{list-style:none}
 em,address{font-style:normal} a{text-decoration:none} a:hover,a:active,a:focus{text-decoration:underline}
+
+#outside {
+	margin : 50px auto 0px;
+	width : 800px;
+	height: 600px;
+	border : 1px solid aqua;
+	position: relative;
+}
+
+.centerVertical {
+	margin : auto;
+	position: absolute;
+	top:0px;left:0px;right:0px;bottom:0px;
+}
