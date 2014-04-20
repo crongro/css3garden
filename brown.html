@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<title> CSS Garden </title>
+
+<link rel="stylesheet" type="text/css" href="css/common.css" media="screen">
+
+<style>
+
+/*Safari and Chrome:*/
+
+@-webkit-keyframes wave {
+
+}
+
+#stage {
+	width : 600px;
+	height : 800px;
+	border : 1px solid black;
+	position: relative;
+}
+
+#stage:hover{
+	1-webkit-animation : 1.5s wave steps(16), 1.5s 1.5s wave2 steps(6);
+}
+
+#face {
+	outline: 1px solid;
+	position: relative;
+	margin : 10% auto;
+	width : 440px;
+	height : 400px;
+	background-color: #6B483B;
+	border-radius: 50%;
+}
+
+.eye {
+	position: absolute;
+	width : 20px;
+	height : 20px;
+	background-color: #000;
+	border-radius: 50%;
+	top : 40%;
+}
+
+.eyeleft {
+	left : 42%;
+}
+
+.eyeright {
+	left : 53.8%; /* 50 + ((200-(4.4x+w))/4)  -> x : % of left , w : width of eye; */
+}
+
+.mouthOutline {
+	outline: 1px solid;
+	position: absolute;
+	width : 100px;
+	height : 105px;
+	top : 45%;
+	left : 38.5%;
+	background-color: #f1d7c8;
+	border-radius: 50%;
+}
+
+.nose {
+	outline: 1px solid;
+	position: absolute;
+	width  :20px;
+	height: 18px;
+	background-color: #000;
+	border-radius: 50%;
+	top : 4%;
+	left :40%;
+	border-radius: 50%/100% 100% 18% 18%;
+	-webkit-transform: rotate(180deg);
+}	
+
+.mouthTop {
+	position: absolute;
+	width: 4px;
+	height: 30px;
+	background-color: #000;
+	top: 20%;
+	left: 48%;
+}
+
+.mouthBottom{
+	position: absolute;
+	width: 4px;
+	background-color: #000;
+	top: 45%;
+	border-radius: 0 0 20% 20%;
+}
+
+.mbLeft {
+	-webkit-transform: rotate(30deg);
+	height: 40px;
+	left: 38%;
+}
+
+.mbRight {
+	-webkit-transform: rotate(-30deg);
+	height: 30px;
+	left: 55%;
+}
+
+.ear {
+	position: absolute;
+	width: 120px;
+	height: 110px;
+	background-color: #6B483B;
+	top: -5%;
+	border-radius: 50% 50% 50% 50%;
+	z-index: -1;
+}
+
+.earLeft {
+	left: 10%;
+	-webkit-transform: rotate(-27deg);
+}
+
+.earRight{
+	right: 10%;
+	-webkit-transform: rotate(27deg);
+}
+
+/* For Debugging */
+._vBase {
+	position: absolute;
+	width : 220px;
+	height : 400px;
+	border-right : 1px dotted black;
+}
+
+</style>
+<script type="text/javascript">
+</script>
+
+<html>
+<body>
+	<div id="outside">
+
+		<div id="stage" class="centerVertical">
+			<div id="face">
+				<div class="eye eyeleft"></div>
+				<div class="eye eyeright"></div>
+				<div class="mouthOutline">
+					<div class="nose"></div>
+					<div class="mouthTop"></div>
+					<div class="mouthBottom mbLeft"></div>
+					<div class="mouthBottom mbRight"></div>
+				</div>
+				<div class="ear earLeft"></div>
+				<div class="ear earRight"></div>
+				<div class="_vBase"></div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+	
+</html>
