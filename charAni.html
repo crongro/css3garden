@@ -12,38 +12,28 @@
 
 
 @-webkit-keyframes typing{
-	from {
-	 	width : 0;
-	}
-	to {
-		width : 20ch;
-	}
+	from {width : 0; }
+	to {width : 17ch; }
 }
 
 @-webkit-keyframes caret {
-	0% {
-		border-color: black;
-	}
-	50% {
-		border-color : transparent;
-	}
-	100% {
-		border-color: black;
-	}
+	0% 	 {border-color : black; }
+	50%  {border-color : transparent; }
+	100% {border-color : black; }
 }
 
 #stage {
-	font : bold 100% Consolas,Monaco,monospace; /* commont 에 정의된 font는 안된다 */
+	font : bold 500% Consolas,Monaco,monospace; /* commont 에 정의된 font는 안된다 */
 	position: absolute;
-	top :10em;
-	left : 10em;
+	top :4em;
+	left : 1em;
 	overflow: hidden;
-	width : 20ch;
+	width : 17ch;
 	height : auto;
-	white-space: nowrap;
+	white-space: nowrap; /* width가 작아도 글자가 줄바꿈되지 않게 하기 */
 	text-align: center;
-	border-right : 0.15em solid black;
-	-webkit-animation : typing 10s steps(20,end), caret 1s step-end infinite ; /* step-end 나왔다 바로 사라짐 */
+	border-right : 2px solid black;
+	-webkit-animation : typing 10s steps(17,end), caret 1.2s step-end infinite ; /* step-end 나왔다 바로 사라짐 */
 }
 
 </style>
@@ -55,7 +45,7 @@
 	<div id="outside">
 
 		<div id="stage">
-		MY NAME IS JISU.YOUN	
+		MY NAME IS NIGAYO
 		</div>
 		
 	</div>

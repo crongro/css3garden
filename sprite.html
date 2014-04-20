@@ -9,20 +9,6 @@
 
 <style>
 
-#outside {
-	margin : 50px auto 0px;
-	width : 800px;
-	height: 600px;
-	border : 1px solid aqua;
-	position: relative;
-}
-
-.centerVertical {
-	margin : auto;
-	position: absolute;
-	top:0px;left:0px;right:0px;bottom:0px;
-}
-
 @-webkit-keyframes wave2 {
 	from {
 		left : -300px;
@@ -43,13 +29,16 @@
 }
 
 #stage {
-	1border : 1px solid red;
 	left : 0px;
 	width  : 50px;
 	height : 64px;
 	background: url(img/s.png) 0 0;
+}
+
+#stage:hover {
 	-webkit-animation : 1.5s wave steps(16), 1.5s 1.5s wave2 steps(6);
 }
+
 
 </style>
 <script type="text/javascript">
