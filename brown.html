@@ -15,6 +15,14 @@
 
 }
 
+/* For Debugging */
+._vBase {
+	position: absolute;
+	width : 220px;
+	height : 400px;
+	1border-right : 1px dotted black;
+}
+
 #stage {
 	width : 600px;
 	height : 800px;
@@ -28,9 +36,9 @@
 }
 
 #face {
-	1outline: 1px solid;
+	border: 5px solid black;
 	position: relative;
-	margin : 10% auto;
+	margin : 10% auto 0%;
 	width : 440px;
 	height : 400px;
 	background-color: #6B483B;
@@ -71,7 +79,6 @@
 	width  :20px;
 	height: 18px;
 	background-color: #000;
-	border-radius: 50%;
 	top : 4%;
 	left :40%;
 	border-radius: 50%/100% 100% 18% 18%;
@@ -108,6 +115,7 @@
 }
 
 .ear {
+	border: 5px solid black;
 	position: absolute;
 	width: 120px;
 	height: 110px;
@@ -127,12 +135,110 @@
 	-webkit-transform: rotate(27deg);
 }
 
-/* For Debugging */
-._vBase {
+.earIn {
 	position: absolute;
-	width : 220px;
+	width: 60px;
+	height: 55px;
+	background-color: #4D302A;
+	top: 0;
+	border-radius: 50% 50% 50% 50%;
+	z-index: -1;
+}
+
+.earInLeft {
+	left: 16%;
+	-webkit-transform: rotate(-27deg);
+}
+
+.earInRight{
+	right: 16%;
+	-webkit-transform: rotate(27deg);
+}
+
+#bBody{
+	1outline : 1px solid;
+	position: relative;
+	margin : 0 auto;
+	width : 440px;
 	height : 400px;
-	1border-right : 1px dotted black;
+	1background-color: #6B483B;
+}
+
+.arm {
+	border: 5px solid black;
+	position: absolute;
+	margin: 0 auto;
+	width: 120px;
+	height: 280px;
+	background-color: #6B483B;
+	border-radius: 70%/100% 100% 50% 50%;
+	top: -15%;
+	z-index: -3;
+}
+
+.armLeft {
+	left: 25px;
+	-webkit-transform: rotate(10deg);
+}
+
+.armRight {
+	right: 25px;
+	-webkit-transform: rotate(-10deg);
+}
+
+/* 상체 */
+.upperBody {
+	border: 5px solid black;
+	position: absolute;
+	margin: 0 auto;
+	width: 280px;
+	height: 240px;
+	background-color: #FFFFFF;
+	top: -15%;
+	z-index: -1;
+	left: 17%;
+	border-radius: 10%/100% 100%;
+	-webkit-transform: rotate(90deg);
+}
+
+.armT {
+	border-radius: 70%/100% 100% 0% 0%;
+	background-color: white;
+	z-index: -2;
+	height: 100px;
+}
+
+.armLeftT {
+	left: 60px;
+	-webkit-transform: rotate(20deg);
+}
+
+.armRightT {
+	right: 60px;
+	-webkit-transform: rotate(-20deg);
+}
+
+.upperBodyTLayer {
+	width: 100px;
+	left: 37.5%;
+	top: -40%;
+	border : 5px solid white;
+}
+
+.logo {
+	-webkit-transform: rotate(0deg);
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	left: 27%;
+	top: 12%;
+	border: 0;
+	font: bold 3.2em Consolas,Monaco,monospace;
+}
+
+.logo > span {
+	color : rgb(198, 38, 38);
 }
 
 </style>
@@ -155,7 +261,18 @@
 				</div>
 				<div class="ear earLeft"></div>
 				<div class="ear earRight"></div>
+				<div class="earIn earInLeft"></div>
+				<div class="earIn earInRight"></div>
 				<div class="_vBase"></div>
+			</div>
+			<div id="bBody">
+				<div class="arm armLeft"></div>
+				<div class="arm armRight"></div>
+				<div class="upperBody"></div>
+				<div class="arm armT armLeftT"></div>
+				<div class="arm armT armRightT"></div>
+				<div class="upperBody upperBodyTLayer"></div>
+				<div class="upperBody logo">I <span>LOVE</span> CONY</div>
 			</div>
 		</div>
 		
