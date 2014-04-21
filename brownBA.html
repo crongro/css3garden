@@ -135,24 +135,16 @@
 	-webkit-transform: rotate(27deg);
 }
 
-.earIn {
+.earLeft:after , .earRight:after{
 	position: absolute;
+	content: "";
 	width: 60px;
 	height: 55px;
 	background-color: #4D302A;
-	top: 0;
+	top: 13%;
+	left: 23%;
 	border-radius: 50% 50% 50% 50%;
 	z-index: -1;
-}
-
-.earInLeft {
-	left: 16%;
-	-webkit-transform: rotate(-27deg);
-}
-
-.earInRight{
-	right: 16%;
-	-webkit-transform: rotate(27deg);
 }
 
 #bBody{
@@ -201,6 +193,28 @@
 	-webkit-transform: rotate(90deg);
 }
 
+/* TEXT T-Shirt LOGO */
+.upperBody:nth-child(3):before{
+	position: absolute;
+	content: "I LOVE CONY";
+	top: 20%;
+	left: 30%;
+	-webkit-transform: rotate(-90deg);
+	font: bold 2.5em Consolas,Monaco,monospace;
+	color : rgb(223, 94, 117);
+}
+
+/* T-shirt Neck */
+.upperBody:nth-child(3):after {
+	position: absolute;
+	content: "";
+	width: 70px;
+	top: -4%;
+	border: 10px solid rgb(255, 255, 255);
+	height: 240px;
+}
+
+
 .armT {
 	border-radius: 70%/100% 100% 0% 0%;
 	background-color: white;
@@ -225,21 +239,6 @@
 	border : 10px solid white;
 }
 
-.logo {
-	-webkit-transform: rotate(0deg);
-	width: 200px;
-	height: 100px;
-	text-align: center;
-	line-height: 100px;
-	left: 27%;
-	top: 12%;
-	border: 0;
-	font: bold 3.2em Consolas,Monaco,monospace;
-}
-
-.logo > span {
-	color : rgb(198, 38, 38);
-}
 
 </style>
 <script type="text/javascript">
@@ -261,8 +260,6 @@
 				</div>
 				<div class="ear earLeft"></div>
 				<div class="ear earRight"></div>
-				<div class="earIn earInLeft"></div>
-				<div class="earIn earInRight"></div>
 				<div class="_vBase"></div>
 			</div>
 			<div id="bBody">
@@ -271,8 +268,6 @@
 				<div class="upperBody"></div>
 				<div class="arm armT armLeftT"></div>
 				<div class="arm armT armRightT"></div>
-				<div class="upperBody upperBodyTLayer"></div>
-				<div class="upperBody logo">I <span>LOVE</span> CONY</div>
 			</div>
 		</div>
 		
