@@ -23,6 +23,15 @@
 	1border-right : 1px dotted black;
 }
 
+
+/* common */
+.circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+
 #stage {
 	width : 600px;
 	height : 800px;
@@ -42,7 +51,6 @@
 	width : 440px;
 	height : 400px;
 	background-color: #6B483B;
-	border-radius: 50%;
 }
 
 .eye {
@@ -50,7 +58,6 @@
 	width : 20px;
 	height : 20px;
 	background-color: #000;
-	border-radius: 50%;
 	top : 40%;
 }
 
@@ -70,7 +77,6 @@
 	top : 45%;
 	left : 38.5%;
 	background-color: #f1d7c8;
-	border-radius: 50%;
 }
 
 .nose {
@@ -83,6 +89,10 @@
 	left :40%;
 	border-radius: 50%/100% 100% 18% 18%;
 	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
 }	
 
 .mouthTop {
@@ -104,12 +114,20 @@
 
 .mbLeft {
 	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	transform: rotate(30deg);
 	height: 40px;
 	left: 38%;
 }
 
 .mbRight {
 	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
 	height: 30px;
 	left: 55%;
 }
@@ -121,18 +139,25 @@
 	height: 110px;
 	background-color: #6B483B;
 	top: -5%;
-	border-radius: 50% 50% 50% 50%;
 	z-index: -1;
 }
 
 .earLeft {
 	left: 10%;
 	-webkit-transform: rotate(-27deg);
+	-moz-transform: rotate(-27deg);
+	-ms-transform: rotate(-27deg);
+	-o-transform: rotate(-27deg);
+	transform: rotate(-27deg);
 }
 
 .earRight{
 	right: 10%;
 	-webkit-transform: rotate(27deg);
+	-moz-transform: rotate(27deg);
+	-ms-transform: rotate(27deg);
+	-o-transform: rotate(27deg);
+	transform: rotate(27deg);
 }
 
 .earLeft:after , .earRight:after{
@@ -143,8 +168,10 @@
 	background-color: #4D302A;
 	top: 13%;
 	left: 23%;
-	border-radius: 50% 50% 50% 50%;
 	z-index: -1;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 }
 
 #bBody{
@@ -153,7 +180,6 @@
 	margin : 0 auto;
 	width : 440px;
 	height : 400px;
-	1background-color: #6B483B;
 }
 
 .arm {
@@ -163,6 +189,8 @@
 	width: 120px;
 	height: 280px;
 	background-color: #6B483B;
+	-webkit-border-radius: 70%/100% 100% 50% 50%;
+	-moz-border-radius: 70%/100% 100% 50% 50%;
 	border-radius: 70%/100% 100% 50% 50%;
 	top: -15%;
 	z-index: -3;
@@ -171,11 +199,59 @@
 .armLeft {
 	left: 25px;
 	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+.armLeft:after {
+	position: absolute;
+	content: "";
+	border: 5px solid black;
+	width: 120px;
+	top: -3%;
+	left: 10%;
+	-webkit-border-radius: 70%/100% 100% 0% 0%;
+	-moz-border-radius: 70%/100% 100% 0% 0%;
+	border-radius: 70%/100% 100% 0% 0%;
+	background-color: white;
+	z-index: -2;
+	height: 100px;
+	-webkit-transform: rotate(11deg);
+	-moz-transform: rotate(11deg);
+	-ms-transform: rotate(11deg);
+	-o-transform: rotate(11deg);
+	transform: rotate(11deg);
 }
 
 .armRight {
 	right: 25px;
 	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+
+.armRight:after {
+	position: absolute;
+	content: "";
+	border: 5px solid black;
+	width: 120px;
+	top: -3%;
+	right: 10%;
+	-webkit-border-radius: 70%/100% 0% 0%;
+	-moz-border-radius: 70%/100% 0% 0%;
+	border-radius: 70%/100% 0% 0%;
+	background-color: white;
+	z-index: -2;
+	height: 100px;
+	-webkit-transform: rotate(-11deg);
+	-moz-transform: rotate(-11deg);
+	-ms-transform: rotate(-11deg);
+	-o-transform: rotate(-11deg);
+	transform: rotate(-11deg);
 }
 
 /* 상체 */
@@ -189,8 +265,14 @@
 	top: -15%;
 	z-index: -1;
 	left: 17%;
+	-webkit-border-radius: 10%/100% 100%;
+	-moz-border-radius: 10%/100% 100%;
 	border-radius: 10%/100% 100%;
 	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 /* TEXT T-Shirt LOGO */
@@ -199,9 +281,13 @@
 	content: "I LOVE CONY";
 	top: 20%;
 	left: 30%;
-	-webkit-transform: rotate(-90deg);
 	font: bold 2.5em Consolas,Monaco,monospace;
 	color : rgb(223, 94, 117);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 
 /* T-shirt Neck */
@@ -209,27 +295,38 @@
 	position: absolute;
 	content: "";
 	width: 70px;
-	top: -4%;
+	top: -6%;
 	border: 10px solid rgb(255, 255, 255);
 	height: 240px;
+	background-color: white;
 }
 
 
 .armT {
-	border-radius: 70%/100% 100% 0% 0%;
 	background-color: white;
 	z-index: -2;
 	height: 100px;
+	-webkit-border-radius: 70%/100% 100% 0% 0%;
+	-moz-border-radius: 70%/100% 100% 0% 0%;
+	border-radius: 70%/100% 100% 0% 0%;
 }
 
 .armLeftT {
 	left: 60px;
 	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	transform: rotate(20deg);
 }
 
 .armRightT {
 	right: 60px;
 	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
 }
 
 .upperBodyTLayer {
@@ -249,25 +346,23 @@
 	<div id="outside">
 
 		<div id="stage" class="centerVertical">
-			<div id="face">
-				<div class="eye eyeleft"></div>
-				<div class="eye eyeright"></div>
-				<div class="mouthOutline">
+			<div id="face" class="circle">
+				<div class="eye eyeleft circle"></div>
+				<div class="eye eyeright circle"></div>
+				<div class="mouthOutline circle">
 					<div class="nose"></div>
 					<div class="mouthTop"></div>
 					<div class="mouthBottom mbLeft"></div>
 					<div class="mouthBottom mbRight"></div>
 				</div>
-				<div class="ear earLeft"></div>
-				<div class="ear earRight"></div>
+				<div class="ear earLeft circle"></div>
+				<div class="ear earRight circle"></div>
 				<div class="_vBase"></div>
 			</div>
 			<div id="bBody">
 				<div class="arm armLeft"></div>
 				<div class="arm armRight"></div>
 				<div class="upperBody"></div>
-				<div class="arm armT armLeftT"></div>
-				<div class="arm armT armRightT"></div>
 			</div>
 		</div>
 		
