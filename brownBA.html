@@ -187,12 +187,14 @@
 	position: absolute;
 	margin: 0 auto;
 	width: 120px;
-	height: 280px;
+	1height: 280px;
+	height: 260px;
 	background-color: #6B483B;
 	-webkit-border-radius: 70%/100% 100% 50% 50%;
 	-moz-border-radius: 70%/100% 100% 50% 50%;
 	border-radius: 70%/100% 100% 50% 50%;
-	top: -15%;
+	1top: -15%;
+	top: -11%;
 	z-index: -3;
 }
 
@@ -336,6 +338,34 @@
 	border : 10px solid white;
 }
 
+/* Animation */
+
+@-webkit-keyframes moveLeftArm {
+	to {
+	-webkit-transform: rotate(120deg);
+	}
+}
+
+@-webkit-keyframes moveFace {
+	to { -webkit-transform : rotate(10deg); }
+}
+
+@-webkit-keyframes eyeScale {
+	to { -webkit-transform: scale(1.1);}
+}
+
+#wrapper {
+	-webkit-animation: moveFace 1s 2s 10 alternate;
+}
+
+.eye {
+	-webkit-animation : eyeScale 1s 2s 10 alternate;
+}
+
+.armLeft {
+	-webkit-animation : moveLeftArm 1s 2s 10 alternate;
+	-webkit-transform-origin: 48% 10%;
+}
 
 </style>
 <script type="text/javascript">
@@ -346,19 +376,22 @@
 	<div id="outside">
 
 		<div id="stage" class="centerVertical">
-			<div id="face" class="circle">
-				<div class="eye eyeleft circle"></div>
-				<div class="eye eyeright circle"></div>
-				<div class="mouthOutline circle">
-					<div class="nose"></div>
-					<div class="mouthTop"></div>
-					<div class="mouthBottom mbLeft"></div>
-					<div class="mouthBottom mbRight"></div>
+			<div id="wrapper">
+				<div id="face" class="circle">
+					<div class="eye eyeleft circle"></div>
+					<div class="eye eyeright circle"></div>
+					<div class="mouthOutline circle">
+						<div class="nose"></div>
+						<div class="mouthTop"></div>
+						<div class="mouthBottom mbLeft"></div>
+						<div class="mouthBottom mbRight"></div>
+					</div>
+					<div class="ear earLeft circle"></div>
+					<div class="ear earRight circle"></div>
+					<div class="_vBase"></div>
 				</div>
-				<div class="ear earLeft circle"></div>
-				<div class="ear earRight circle"></div>
-				<div class="_vBase"></div>
 			</div>
+
 			<div id="bBody">
 				<div class="arm armLeft"></div>
 				<div class="arm armRight"></div>
