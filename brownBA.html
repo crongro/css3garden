@@ -198,6 +198,7 @@
 	z-index: -3;
 }
 
+
 .armLeft {
 	left: 25px;
 	-webkit-transform: rotate(15deg);
@@ -378,15 +379,19 @@
 
 .armLeft {
 	-webkit-animation : putyourhandsup 1s 2.5s forwards , shakehands 0.3s 3.6s infinite linear alternate;
-	-webkit-transform-origin: 48% 10%;
+	1-webkit-transform-origin: 48% 10%;
+}
+
+#armWrapper {
+
 }
 
 .mbLeft {
-	-webkit-animation: smileLeft 0.5s 4s step-end forwards;
+	-webkit-animation: smileLeft 0.5s 2s step-end forwards;
 }
 
 .mbRight {
-	-webkit-animation: smileRight 0.5s 4s step-end forwards;
+	-webkit-animation: smileRight 0.5s 2s step-end forwards;
 }
 
 </style>
@@ -415,7 +420,7 @@
 			</div>
 
 			<div id="bBody">
-				<div class="arm armLeft"></div>
+				<div id="armWrapper"> <div class="arm armLeft"></div> </div>
 				<div class="arm armRight"></div>
 				<div class="upperBody"></div>
 			</div>
