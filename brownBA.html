@@ -289,6 +289,8 @@
 	-ms-transform: rotate(-90deg);
 	-o-transform: rotate(-90deg);
 	transform: rotate(-90deg);
+	-webkit-animation: changecolor 0.5s 6s step-end alternate infinite;
+	animation: changecolor 0.5s 6s step-end alternate infinite;
 }
 
 /* T-shirt Neck */
@@ -339,16 +341,28 @@
 
 
 #armWrapper {
-	-webkit-transform: rotate(21deg);
-	-webkit-transform-origin: 10%;
 	z-index: -5;
 	position: relative;
 	top: -12%;
 	left: 16%;
+	-webkit-transform: rotate(21deg);
+	-moz-transform: rotate(21deg);
+	-ms-transform: rotate(21deg);
+	-o-transform: rotate(21deg);
+	transform: rotate(21deg);
+	-webkit-transform-origin: 10%;
+	-moz-transform-origin: 10%;
+	-ms-transform-origin: 10%;
+	-o-transform-origin: 10%;
+	transform-origin: 10%;
 }
 
 #armWrapperRight {
 	-webkit-transform: rotate(-21deg);
+	-moz-transform: rotate(-21deg);
+	-ms-transform: rotate(-21deg);
+	-o-transform: rotate(-21deg);
+	transform: rotate(-21deg);
 	z-index: -5;
 	position: relative;
 	top: -28%;
@@ -359,32 +373,132 @@
 
 @-webkit-keyframes putyourhandsup{
 	to {
-	-webkit-transform: rotate(120deg);
-/*	top : -3%;
-	left: 13%;
-*/	}
+		-webkit-transform: rotate(120deg);
+		-moz-transform: rotate(120deg);
+		-ms-transform: rotate(120deg);
+		-o-transform: rotate(120deg);
+		transform: rotate(120deg);
+	 }
 }
+@keyframes putyourhandsup{
+	to {
+		-webkit-transform: rotate(120deg);
+		-moz-transform: rotate(120deg);
+		-ms-transform: rotate(120deg);
+		-o-transform: rotate(120deg);
+		transform: rotate(120deg);
+	 }
+}
+
 
 @-webkit-keyframes shakehands {
 	from {
 		-webkit-transform: rotate(120deg);
-	}
+		-moz-transform: rotate(120deg);
+		-ms-transform: rotate(120deg);
+		-o-transform: rotate(120deg);
+		transform: rotate(120deg);
+	 }
 	to {
 		-webkit-transform: rotate(100deg);
-	}
+		-moz-transform: rotate(100deg);
+		-ms-transform: rotate(100deg);
+		-o-transform: rotate(100deg);
+		transform: rotate(100deg);
+	 }
+}
+@keyframes shakehands {
+	from {
+		-webkit-transform: rotate(120deg);
+		-moz-transform: rotate(120deg);
+		-ms-transform: rotate(120deg);
+		-o-transform: rotate(120deg);
+		transform: rotate(120deg);
+	 }
+	to {
+		-webkit-transform: rotate(100deg);
+		-moz-transform: rotate(100deg);
+		-ms-transform: rotate(100deg);
+		-o-transform: rotate(100deg);
+		transform: rotate(100deg);
+	 }
 }
 
 @-webkit-keyframes moveFace {
-	to { -webkit-transform : rotate(8deg); }
+	to {
+		-webkit-transform: rotate(8deg);
+		-moz-transform: rotate(8deg);
+		-ms-transform: rotate(8deg);
+		-o-transform: rotate(8deg);
+		transform: rotate(8deg);
+	  }
+}
+@keyframes moveFace {
+	to {
+	-webkit-transform: rotate(8deg);
+	 -moz-transform: rotate(8deg);
+	 -ms-transform: rotate(8deg);
+	 -o-transform: rotate(8deg);
+	 transform: rotate(8deg);
+	 }
+}
+
+
+@-webkit-keyframes moveFacecrazy {
+	to {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	}
+}
+@keyframes moveFacecrazy {
+	to {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	 }
 }
 
 @-webkit-keyframes eyeScale {
-	to { -webkit-transform: scale(1.1);}
+	to {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	}
+}
+@keyframes eyeScale {
+	to {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	}
 }
 
 @-webkit-keyframes smileLeft {
-	to { 
+	to {
 		-webkit-transform: rotate(120deg);
+		-moz-transform: rotate(120deg);
+		-ms-transform: rotate(120deg);
+		-o-transform: rotate(120deg);
+		transform: rotate(120deg);
+		left :32%;
+	}
+}
+@keyframes smileLeft {
+	to {
+		-webkit-transform:rotate(120deg);
+		-moz-transform:rotate(120deg);
+		-ms-transform:rotate(120deg);
+		-o-transform:rotate(120deg);
+		transform:rotate(120deg);
 		left :32%;
 	}
 }
@@ -392,31 +506,62 @@
 @-webkit-keyframes smileRight {
 	to { 
 		-webkit-transform: rotate(60deg);
+		-moz-transform: rotate(60deg);
+		-ms-transform: rotate(60deg);
+		-o-transform: rotate(60deg);
+		transform: rotate(60deg);
+		left :65%;
+		top : 45%;
+		height: 40px;
+	}
+}
+@keyframes smileRight {
+	to { 
+		-webkit-transform: rotate(60deg);
+		-moz-transform: rotate(60deg);
+		-ms-transform: rotate(60deg);
+		-o-transform: rotate(60deg);
+		transform: rotate(60deg);
 		left :65%;
 		top : 45%;
 		height: 40px;
 	}
 }
 
-#wrapper {
-	-webkit-animation: moveFace 1s 2s forwards;
+
+@-webkit-keyframes changecolor{
+	0% 	 { color : rgb(223, 94, 117); }
+	50%  { color : transparent; }
+	100% { color : rgb(223, 94, 117); }
+}
+@keyframes changecolor{
+	0% 	 { color : rgb(223, 94, 117); }
+	50%  { color : transparent; }
+	100% { color : rgb(223, 94, 117); }
 }
 
-.eye {
+#wrapper {
+	-webkit-animation: moveFace 1s 2s forwards, moveFacecrazy 4s 15s linear;
+	animation: moveFace 1s 2s forwards, moveFacecrazy 4s 15s linear;
+}
+
+/*.eye {
 	-webkit-animation : eyeScale 1s 2s 10 alternate;
 }
-
+*/
 #armWrapper {
 	-webkit-animation : putyourhandsup 1s 2.5s forwards , shakehands 0.3s 3.6s infinite linear alternate;
-	1-webkit-transform-origin: 48% 10%;
+	animation : putyourhandsup 1s 2.5s forwards , shakehands 0.3s 3.6s infinite linear alternate;
 }
 
 .mbLeft {
-	-webkit-animation: smileLeft 0.5s 2s step-end forwards;
+	-webkit-animation: smileLeft 0.5s 2s linear forwards;
+	animation: smileLeft 0.5s 2s linear forwards;
 }
 
 .mbRight {
-	-webkit-animation: smileRight 0.5s 2s step-end forwards;
+	-webkit-animation: smileRight 0.5s 2s linear forwards;
+	animation: smileRight 0.5s 2s linear forwards;
 }
 
 </style>
