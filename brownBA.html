@@ -195,7 +195,7 @@
 	border-radius: 70%/100% 100% 50% 50%;
 	1top: -15%;
 	top: -11%;
-	z-index: -3;
+	z-index: -30;
 }
 
 
@@ -327,9 +327,18 @@
 	border : 10px solid white;
 }
 
+
+#armWrapper {
+	z-index: -30;
+}
+
 /* Animation */
 
 @-webkit-keyframes putyourhandsup{
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+
 	to {
 	-webkit-transform: rotate(120deg);
 	}
@@ -369,7 +378,6 @@
 }
 
 #wrapper {
-	1-webkit-animation: moveFace 1s 1s alternate;
 	-webkit-animation: moveFace 1s 2s forwards;
 }
 
@@ -379,12 +387,15 @@
 
 .armLeft {
 	-webkit-animation : putyourhandsup 1s 2.5s forwards , shakehands 0.3s 3.6s infinite linear alternate;
-	1-webkit-transform-origin: 48% 10%;
+	-webkit-transform-origin: 48% 10%;
 }
 
-#armWrapper {
 
+/*#armWrapper {
+	-webkit-animation : putyourhandsup 1s 2.5s forwards , shakehands 0.3s 3.6s infinite linear alternate;
+	-webkit-transform-origin: 48% 10%;
 }
+*/
 
 .mbLeft {
 	-webkit-animation: smileLeft 0.5s 2s step-end forwards;
@@ -420,7 +431,7 @@
 			</div>
 
 			<div id="bBody">
-				<div id="armWrapper"> <div class="arm armLeft"></div> </div>
+				<div id="armWrapper"><div class="arm armLeft"></div></div>
 				<div class="arm armRight"></div>
 				<div class="upperBody"></div>
 			</div>
