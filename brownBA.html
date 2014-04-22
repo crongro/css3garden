@@ -186,63 +186,73 @@
 	border: 5px solid black;
 	position: absolute;
 	margin: 0 auto;
-	width: 120px;
-	1height: 280px;
-	height: 260px;
+	width: 80px;
+	height: 220px;
 	background-color: #6B483B;
-	-webkit-border-radius: 70%/100% 100% 50% 50%;
-	-moz-border-radius: 70%/100% 100% 50% 50%;
-	border-radius: 70%/100% 100% 50% 50%;
-	1top: -15%;
-	top: -11%;
-	z-index: -30;
+	1top: -16%;
+	z-index: -4;
+	-webkit-border-radius: 50%/50%;
+	-moz-border-radius: 50%/50%;
+	border-radius: 50%/50%;
 }
 
 
 .armLeft {
-	left: 25px;
-	-webkit-transform: rotate(15deg);
+	1left: 45px;
+/*	-webkit-transform: rotate(15deg);
 	-moz-transform: rotate(15deg);
 	-ms-transform: rotate(15deg);
 	-o-transform: rotate(15deg);
 	transform: rotate(15deg);
-}
+*/}
 
 .armLeft:after {
 	position: absolute;
 	content: "";
 	border: 5px solid black;
-	width: 120px;
+	width: 80px;
 	top: -3%;
+	left : -1%;
 	-webkit-border-radius: 70%/100% 100% 0% 0%;
 	-moz-border-radius: 70%/100% 100% 0% 0%;
 	border-radius: 70%/100% 100% 0% 0%;
 	background-color: white;
-	z-index: -2;
+	z-index: -3;
 	height: 100px;
+	-webkit-transform: rotate(4deg);
+	-moz-transform: rotate(4deg);
+	-ms-transform: rotate(4deg);
+	-o-transform: rotate(4deg);
+	transform: rotate(4deg);
 }
 
 .armRight {
-	right: 25px;
-	-webkit-transform: rotate(-15deg);
+	1right: 25px;
+/*	-webkit-transform: rotate(-15deg);
 	-moz-transform: rotate(-15deg);
 	-ms-transform: rotate(-15deg);
 	-o-transform: rotate(-15deg);
 	transform: rotate(-15deg);
-}
+*/}
 
 .armRight:after {
 	position: absolute;
 	content: "";
 	border: 5px solid black;
-	width: 120px;
+	width: 80px;
 	top: -3%;
-	-webkit-border-radius: 70%/100% 100% 0% 0%;
-	-moz-border-radius: 70%/100% 100% 0% 0%;
-	border-radius: 70%/100% 100% 0% 0%;
+	right:1%;
 	background-color: white;
 	z-index: -2;
 	height: 100px;
+	-webkit-border-radius: 70%/100% 100% 0% 0%;
+	-moz-border-radius: 70%/100% 100% 0% 0%;
+	border-radius: 70%/100% 100% 0% 0%;
+	-webkit-transform: rotate(-4deg);
+	-moz-transform: rotate(-4deg);
+	-ms-transform: rotate(-4deg);
+	-o-transform: rotate(-4deg);
+	transform: rotate(-4deg);
 }
 
 /* 상체 */
@@ -329,19 +339,30 @@
 
 
 #armWrapper {
-	z-index: -30;
+	-webkit-transform: rotate(21deg);
+	-webkit-transform-origin: 10%;
+	z-index: -5;
+	position: relative;
+	top: -12%;
+	left: 16%;
+}
+
+#armWrapperRight {
+	-webkit-transform: rotate(-21deg);
+	z-index: -5;
+	position: relative;
+	top: -28%;
+	left : 62%;
 }
 
 /* Animation */
 
 @-webkit-keyframes putyourhandsup{
-	from {
-		-webkit-transform: rotate(0deg);
-	}
-
 	to {
 	-webkit-transform: rotate(120deg);
-	}
+/*	top : -3%;
+	left: 13%;
+*/	}
 }
 
 @-webkit-keyframes shakehands {
@@ -385,17 +406,10 @@
 	-webkit-animation : eyeScale 1s 2s 10 alternate;
 }
 
-.armLeft {
+#armWrapper {
 	-webkit-animation : putyourhandsup 1s 2.5s forwards , shakehands 0.3s 3.6s infinite linear alternate;
-	-webkit-transform-origin: 48% 10%;
+	1-webkit-transform-origin: 48% 10%;
 }
-
-
-/*#armWrapper {
-	-webkit-animation : putyourhandsup 1s 2.5s forwards , shakehands 0.3s 3.6s infinite linear alternate;
-	-webkit-transform-origin: 48% 10%;
-}
-*/
 
 .mbLeft {
 	-webkit-animation: smileLeft 0.5s 2s step-end forwards;
@@ -431,8 +445,12 @@
 			</div>
 
 			<div id="bBody">
-				<div id="armWrapper"><div class="arm armLeft"></div></div>
-				<div class="arm armRight"></div>
+				<div id="armWrapper">
+					<div class="arm armLeft"></div>
+				</div>
+				<div id="armWrapperRight">
+					<div class="arm armRight"></div>
+				</div>
 				<div class="upperBody"></div>
 			</div>
 		</div>
