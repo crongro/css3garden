@@ -200,11 +200,11 @@
 
 .armLeft {
 	left: 25px;
-	-webkit-transform: rotate(10deg);
-	-moz-transform: rotate(10deg);
-	-ms-transform: rotate(10deg);
-	-o-transform: rotate(10deg);
-	transform: rotate(10deg);
+	-webkit-transform: rotate(15deg);
+	-moz-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	transform: rotate(15deg);
 }
 
 .armLeft:after {
@@ -213,27 +213,21 @@
 	border: 5px solid black;
 	width: 120px;
 	top: -3%;
-	left: 10%;
 	-webkit-border-radius: 70%/100% 100% 0% 0%;
 	-moz-border-radius: 70%/100% 100% 0% 0%;
 	border-radius: 70%/100% 100% 0% 0%;
 	background-color: white;
 	z-index: -2;
 	height: 100px;
-	-webkit-transform: rotate(11deg);
-	-moz-transform: rotate(11deg);
-	-ms-transform: rotate(11deg);
-	-o-transform: rotate(11deg);
-	transform: rotate(11deg);
 }
 
 .armRight {
 	right: 25px;
-	-webkit-transform: rotate(-10deg);
-	-moz-transform: rotate(-10deg);
-	-ms-transform: rotate(-10deg);
-	-o-transform: rotate(-10deg);
-	transform: rotate(-10deg);
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
 }
 
 .armRight:after {
@@ -242,18 +236,12 @@
 	border: 5px solid black;
 	width: 120px;
 	top: -3%;
-	right: 10%;
-	-webkit-border-radius: 70%/100% 0% 0%;
-	-moz-border-radius: 70%/100% 0% 0%;
-	border-radius: 70%/100% 0% 0%;
+	-webkit-border-radius: 70%/100% 100% 0% 0%;
+	-moz-border-radius: 70%/100% 100% 0% 0%;
+	border-radius: 70%/100% 100% 0% 0%;
 	background-color: white;
 	z-index: -2;
 	height: 100px;
-	-webkit-transform: rotate(-11deg);
-	-moz-transform: rotate(-11deg);
-	-ms-transform: rotate(-11deg);
-	-o-transform: rotate(-11deg);
-	transform: rotate(-11deg);
 }
 
 /* 상체 */
@@ -340,22 +328,48 @@
 
 /* Animation */
 
-@-webkit-keyframes moveLeftArm {
+@-webkit-keyframes putyourhandsup{
 	to {
 	-webkit-transform: rotate(120deg);
 	}
 }
 
+@-webkit-keyframes shakehands {
+	from {
+		-webkit-transform: rotate(120deg);
+	}
+	to {
+		-webkit-transform: rotate(100deg);
+	}
+}
+
 @-webkit-keyframes moveFace {
-	to { -webkit-transform : rotate(10deg); }
+	to { -webkit-transform : rotate(8deg); }
 }
 
 @-webkit-keyframes eyeScale {
 	to { -webkit-transform: scale(1.1);}
 }
 
+@-webkit-keyframes smileLeft {
+	to { 
+		-webkit-transform: rotate(120deg);
+		left :32%;
+	}
+}
+
+@-webkit-keyframes smileRight {
+	to { 
+		-webkit-transform: rotate(60deg);
+		left :65%;
+		top : 45%;
+		height: 40px;
+	}
+}
+
 #wrapper {
-	-webkit-animation: moveFace 1s 2s 10 alternate;
+	1-webkit-animation: moveFace 1s 1s alternate;
+	-webkit-animation: moveFace 1s 2s forwards;
 }
 
 .eye {
@@ -363,8 +377,16 @@
 }
 
 .armLeft {
-	-webkit-animation : moveLeftArm 1s 2s 10 alternate;
+	-webkit-animation : putyourhandsup 1s 2.5s forwards , shakehands 0.3s 3.6s infinite linear alternate;
 	-webkit-transform-origin: 48% 10%;
+}
+
+.mbLeft {
+	-webkit-animation: smileLeft 0.5s 4s step-end forwards;
+}
+
+.mbRight {
+	-webkit-animation: smileRight 0.5s 4s step-end forwards;
 }
 
 </style>
