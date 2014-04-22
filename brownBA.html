@@ -191,10 +191,7 @@
 	background-color: #6B483B;
 	1top: -16%;
 	z-index: -4;
-/*	-webkit-border-radius: 70% 0% 50% 50%;
-	-moz-border-radius: 10% 0% 50% 50%;
-	border-radius: 70% 0% 50% 50%; 
-*/}
+}
 
 
 .armLeft {
@@ -273,14 +270,15 @@
 	top: 20%;
 	left: 30%;
 	font: bold 2.5em Consolas,Monaco,monospace;
-	color : rgb(223, 94, 117);
+	color : #6B483B;
 	-webkit-transform: rotate(-90deg);
 	-moz-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
 	-o-transform: rotate(-90deg);
 	transform: rotate(-90deg);
-	-webkit-animation: changecolor 0.5s 11s step-end alternate infinite;
-	animation: changecolor 0.5s 11s step-end alternate infinite;
+	-webkit-animation: changecolorRed 4s 10s ease-out alternate infinite;
+	animation: changecolorRed 4s 10s ease-out alternate infinite;
+	visibility: hidden;
 }
 
 /* T-shirt Neck */
@@ -294,40 +292,6 @@
 	background-color: white;
 }
 
-
-.armT {
-	background-color: white;
-	z-index: -2;
-	height: 100px;
-	-webkit-border-radius: 70%/100% 100% 0% 0%;
-	-moz-border-radius: 70%/100% 100% 0% 0%;
-	border-radius: 70%/100% 100% 0% 0%;
-}
-
-.armLeftT {
-	left: 60px;
-	-webkit-transform: rotate(20deg);
-	-moz-transform: rotate(20deg);
-	-ms-transform: rotate(20deg);
-	-o-transform: rotate(20deg);
-	transform: rotate(20deg);
-}
-
-.armRightT {
-	right: 60px;
-	-webkit-transform: rotate(-20deg);
-	-moz-transform: rotate(-20deg);
-	-ms-transform: rotate(-20deg);
-	-o-transform: rotate(-20deg);
-	transform: rotate(-20deg);
-}
-
-.upperBodyTLayer {
-	width: 100px;
-	left: 37%;
-	top: -40%;
-	border : 10px solid white;
-}
 
 
 #armWrapper {
@@ -357,6 +321,24 @@
 	position: relative;
 	top: -28%;
 	left : 62%;
+}
+
+.upperBody > div {
+	width: 60%;
+	height: 60%;
+	left: 80%;
+	margin: auto;
+	position: absolute;
+	top: 0px; left: 100px; right: 0px; bottom: 0px;
+	font: bold 2.5em Consolas,Monaco,monospace;
+	line-height: 1.2em;
+	color : #6B483B;
+	z-index: -1;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 
 /* Animation */
@@ -500,16 +482,43 @@
 	}
 }
 
-
 @-webkit-keyframes changecolor{
-	0% 	 { color : rgb(223, 94, 117); }
+	0% 	 { color : #6B483B; } 
 	50%  { color : transparent; }
-	100% { color : rgb(223, 94, 117); }
+	100% { color : #6B483B;}
 }
 @keyframes changecolor{
-	0% 	 { color : rgb(223, 94, 117); }
+	0% 	 { color : #6B483B;}
 	50%  { color : transparent; }
-	100% { color : rgb(223, 94, 117); }
+	100% { color : #6B483B;}
+}
+
+
+@-webkit-keyframes changecolorRed {
+	0% 	 { color : red; visibility : visible;}
+	50%  { color : transparent; }
+	100% { color : red; visibility :visible;}
+}
+@keyframes changecolorRed{
+	0% 	 { color : red; visibility: visible;}
+	50%  { color : transparent; }
+	100% { color : red; visibility: visible;}
+}
+
+
+@-webkit-keyframes hiddenAnimation{
+	to {color :white; }
+}
+@keyframes hiddenAnimation{
+	to {color :white;}
+}
+
+/* z-index 호환성이슈 해결을 위한 animation */
+@-webkit-keyframes dummyAnimation{
+	to {-webkit-transform: rotate(90deg); }
+}
+@keyframes dummyAnimation{
+	to {-webkit-transform: rotate(90deg); }
 }
 
 #wrapper {
@@ -530,6 +539,16 @@
 .mbRight {
 	-webkit-animation: smileRight 0.5s 7s linear forwards;
 	animation: smileRight 0.5s 7s linear forwards;
+}
+
+.upperBody {
+	-webkit-animation : dummyAnimation 1s 7.5s forwards;
+	animation : dummyAnimation 1s 7.5s forwards;
+}
+
+.upperBody > div {
+	-webkit-animation: changecolor 2s 2s 8 ease-out alternate, hiddenAnimation 10000s 6s step-start;
+	animation: changecolor 2s 2s 8 ease-out alternate, hiddenAnimation 10000s 6s step-start;
 }
 
 </style>
@@ -564,7 +583,9 @@
 				<div id="armWrapperRight">
 					<div class="arm armRight"></div>
 				</div>
-				<div class="upperBody"></div>
+				<div class="upperBody">
+					<div>I'm Brown</div>
+				</div>
 			</div>
 		</div>
 		
