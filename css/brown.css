@@ -3,19 +3,19 @@
 /* CSS Properties */
 
 #DEBUGGER_BOX_OUTLINE,
-#stagem, #bBody, .mouthOutline, .nose, ._vBase
+#stage, #bBody, .mouthOutline, .nose, ._vBase
 {
 	1outline:1px solid;
 }
 
 #POSITION_ABSOLUTE,
-._vBase, .eye, .mouthOutline, .nose, .mouthTop, .mouthBottom, .ear, .earLeft:after , .earRight:after, .arm, .armLeft:after, .armRight:after, .upperBody, .upperBody:nth-child(3):before, .upperBody:nth-child(3):after, .upperBody > div
+#stage, ._vBase, .eye, .mouthOutline, .nose, .mouthTop, .mouthBottom, .ear, .earLeft:after , .earRight:after, .arm, .armLeft:after, .armRight:after, .upperBody, .upperBody:nth-child(3):before, .upperBody:nth-child(3):after, .upperBody > div
 {
 	position:absolute;
 }
 
 #POSITION_RELATIVE,
-#face, #stage, #bBody, #armWrapper, #armWrapperRight
+#face, #bBody, #armWrapper, #armWrapperRight
 {
 	position:relative;
 }
@@ -116,7 +116,7 @@
 #stage {
 	width : 600px;
 	height : 800px;
-	margin-top: 200px;
+	margin-top: 20px;
 }
 
 #face {
@@ -300,8 +300,8 @@
 	top: 20%;
 	left: 30%;
 	color : #6B483B;
-	-webkit-animation: changecolorRed 4s 8s ease-out alternate infinite;
-	animation: changecolorRed 4s 8s ease-out alternate infinite;
+	-webkit-animation: changecolorRed 4s 6s ease-out 100 alternate ;
+	animation: changecolorRed 4s 6s ease-out 100 alternate ;
 	visibility: hidden;
 }
 
@@ -544,13 +544,13 @@
 /**********************************************/
 /* Animation Controller */
 #wrapper {
-	-webkit-animation: moveFace 1s 7s forwards, moveFacecrazy 4s 20s linear;
-	animation: moveFace 1s 7s forwards, moveFacecrazy 4s 20s linear;
+	-webkit-animation: moveFace 1s 7s forwards, moveFacecrazy 4s 12s linear;
+	animation: moveFace 1s 7s forwards, moveFacecrazy 4s 12s linear;
 }
 
 #armWrapper {
-	-webkit-animation : putyourhandsup 1s 7.5s forwards , shakehands 0.3s 8.6s infinite linear alternate;
-	animation : putyourhandsup 1s 7.5s forwards , shakehands 0.3s 8.6s infinite linear alternate;
+	-webkit-animation : putyourhandsup 1s 7.5s forwards , shakehands 0.3s 8.6s 100 linear alternate;
+	animation : putyourhandsup 1s 7.5s forwards , shakehands 0.3s 8.6s 100 linear alternate;
 }
 
 .mbLeft {
